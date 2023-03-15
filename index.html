@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tracker</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Link to jQuery UI CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" 
+    integrity="sha512-JKk6UfTrgdZ9OD5J5K5G5wBr0rB90lMc7a0ofYF/xO7OAK+3qk9F/ZKzzJpiCxxw43R1e2QxUzz7+mU2m6DXJQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="container-fluid bg-primary text-white py-3">
+        <div class="row align-items-center">
+            <div class="col-sm-6">
+                <h1>Project Tracker</h1>
+            </div>
+            <div class="col-sm-6 text-end">
+                <h5 id="current-time"></h5>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        Instructions
+                    </div>
+                    <div class="card-body">
+                        <p>Welcome to Project Tracker! To get started, click the button below to add a new project.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-project-modal">Add Project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Project Type</th>
+                            <th>Due Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="project-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Project Modal -->
+<div class="modal fade" id="add-project-modal" tabindex="-1" aria-labelledby="add-project-modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="add-project-modal-label">Add Project</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="add-project-form">
+                    <div class="mb-3">
+                        <label for="project-name" class="form-label">Project Name</label>
+                        <input type="text" class="form-control" id="project-name" name="project-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="project-type" class="form-label">Project Type</label>
+                        <select class="form-select" id="project-type" name="project-type" required>
+                            <option value="">Select a project type</option>
+                            <option value="web">Web Development</option>
+                            <option value="app">App Development</option>
+                            <option value="design">Design</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="due-date" class="form-label">Due Date</label>
+                        <input type="text" class="form-control" id="due-date" name="due-date" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Add Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer class="bg-light py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>Project Manager &copy; 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js" 
+    integrity="sha512-KTYiAN3TAdTgb4sZ4/fx4vLxRQ2/NKOX9JSrSyO/5vBjO2W8dZ+xucLlPKwOv1ECKtW8qXmGpC/ZmFbh+EAFIg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+    <!-- Add Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+                
